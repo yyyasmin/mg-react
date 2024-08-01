@@ -1,0 +1,161 @@
+/* LandingPage.css */
+.landing-page {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2em;
+}
+
+.sub-title {
+  font-size: 1.8em;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 5px;
+  background-color: #8f67d9; /* Light purple color */
+  color: #fff; /* White text color */
+}
+
+.description {
+  font-size: 1.1em; /* Set to the same font size as other descriptions */
+}
+
+.game-options,
+.custom-order,
+.community {
+  text-align: center;
+  margin-bottom: 30px;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Custom Order Button */
+.custom-order button {
+  background-color: #28a745; /* Green color */
+  color: #fff; /* White text color */
+  width: 200px; /* Adjusted width */
+  padding: 12px; /* Increase padding for a larger button */
+  font-size: 18px; /* Increase font size */
+  font-weight: bold; /* Make the font stronger */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px; /* Reduce vertical distance */
+}
+
+.custom-order button:hover {
+  background-color: #218838;
+}
+
+/* Custom Order Form */
+.custom-order form {
+  display: ${showForm ? 'block' : 'none'}; /* Show form only when showForm is true */
+  margin-top: 5px; /* Adjust the margin between the button and the form */
+}
+
+/* Titles */
+.game-options h2,
+.custom-order h2,
+.community h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+/* Game Cards */
+.game-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.game-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  width: 30%;
+  margin: 10px;
+  text-align: center;
+}
+
+.game-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Paragraphs */
+.game-card p,
+.custom-order p,
+.community p {
+  font-size: 1.1em; /* Set to the same font size as other descriptions */
+  margin: 10px 0;
+}
+
+/* Links */
+.game-card a,
+.custom-order a,
+.community a {
+  display: block;
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 0 auto; /* Center the button horizontally */
+}
+
+.game-card a:hover,
+.custom-order a:hover,
+.community a:hover {
+  color: #fff;
+}
+
+/* Game Card Links */
+.game-card a {
+  background-color: #007bff; /* Blue color */
+}
+
+.game-card a:hover {
+  background-color: #0056b3;
+}
+
+/* Custom Order and Community Links */
+.custom-order a,
+.community a {
+  background-color: #28a745; /* Green color */
+  width: 200px; /* Adjusted width */
+}
+
+.custom-order a:hover,
+.community a:hover {
+  background-color: #218838;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+footer p {
+  color: #fff; /* White color */
+  padding: 5px; /* Adjust padding */
+  background-color: #000; /* Black background */
+  display: inline-block; /* Ensure background only spans around the text */
+  border-radius: 5px; /* Add border radius for a framed look */
+}
