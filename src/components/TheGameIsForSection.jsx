@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
-import { Modal, Button, Form } from 'react-bootstrap';
 import styled from 'styled-components';
-import axios from 'axios';
-import { baseUrl } from '../helpers/ServerRoutes';
-import { SectionTitle, PurpleSectionSubTitle, CommunityButton } from './LandingPageStyles';
+import { SectionTitle, PurpleSectionSubTitle } from './LandingPageStyles';
 
 const UDSection = styled.section`
   align-items: center;
@@ -12,39 +9,27 @@ const UDSection = styled.section`
 `;
 
 const TheGameIsForText = `
-  ✔️ Anyone who feels lonely most of the time<br />
-  ✔️ Anyone who has difficulty - at any age! - Find friends or relationships<br />
-  ✔️ Anyone who is "stuck" in social interactions<br />
-  ✔️ All those who feel "transparent" and that the environment does not really know them<br />
-  ✔️ All those who are pushed aside in every conversation and do not really participate<br />
-  ✔️ Caregivers<br />
-  ✔️ Coaches and coaches<br />
-  ✔️ Bridges and bridges<br />
-  ✔️ Teachers<br />
-  ✔️ Parents of children with social difficulties or in special education<br />
-  ✔️ Students and singles who find it difficult to find a relationship<br />
-
+  ✔️ Anyone who <b>feels lonely most of the time</b><br />
+  ✔️ Anyone who <b>has difficulty - at any age! - to find friends or relationships</b><br />
+  ✔️ Anyone who is <b>"stuck" in social interactions</b><br />
+  ✔️ All those who feel <b>"transparent"</b> and that the environment does not really know them<br />
+  ✔️ All those who are <b>pushed aside</b> in every conversation and do not really participate<br />
+  ✔️ <b>Caregivers</b><br />
+  ✔️ <b>Coaches</b><br />
+  ✔️ <b>Bridges</b><br />
+  ✔️ <b>Teachers</b><br />
+  ✔️ <b>Parents of children</b> with social difficulties or in special education<br />
+  ✔️ <b>Students and singles</b> who find it difficult to find a relationship<br />
 `;
 
-
-
-const TheGameIsForSection = ({ onShowUserDetailForm, onHideUserDetailForm, onSubmitUserDetailForm, showUserDetailForm }) => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    password: '',
-  });
-
-
+const TheGameIsForSection = () => {
   return (
     <UDSection>
-
       <SectionTitle>
         Who is Play Your Game suitable for?<br />
       </SectionTitle>
 
       <PurpleSectionSubTitle dangerouslySetInnerHTML={{ __html: TheGameIsForText }} />
-
     </UDSection>
   );
 };

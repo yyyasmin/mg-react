@@ -3,7 +3,7 @@ import { Modal, Button, Form } from 'react-bootstrap';
 import styled from 'styled-components';
 import axios from 'axios';
 import { baseUrl } from '../helpers/ServerRoutes';
-import { SectionTitle, PurpleSectionSubTitle, CommunityButton } from './LandingPageStyles';
+import { SectionTitle, PurpleSectionSubTitle, GreenSectionSubTitle, CommunityButton } from './LandingPageStyles';
 
 const UDSection = styled.section`
   align-items: center;

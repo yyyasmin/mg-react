@@ -12,14 +12,14 @@ import lineImage7 from '../assets/linesImages/p7.jfif';
 import lineImage8 from '../assets/linesImages/p8.jfif';
 
 const lines = [
-  { text: 'Having trouble connecting with other people - friends and/or spouses?', img: lineImage1 },
-  { text: 'Feeling "stuck" and not belonging in social interactions?', img: lineImage2 },
-  { text: 'No suggestions for entertainment or events?', img: lineImage3 },
-  { text: 'Do you stay "out of the conversation" even in WhatsApp groups or on social networks?', img: lineImage4 },
-  { text: 'Feeling lonely? Can\'t find a partner?', img: lineImage5 },
-  { text: 'You hardly leave the house because you have nowhere to go and with whom?', img: lineImage6 },
-  { text: 'Are you very stressed before going out or "dates" and don\'t know how to start a conversation?', img: lineImage7 },
-  { text: 'Choose only hobbies that do not require communication with people?', img: lineImage8 },
+  { text: <><b>Having trouble connecting with other people</b> in social interactions?</>, img: lineImage1 },
+  { text: <><b>Feeling "stuck" and not belonging</b> in social interactions?</>, img: lineImage2 },
+  { text: <><b>No suggestions for entertainment or events?</b></>, img: lineImage3 },
+  { text: <><b>Do you stay "out of the conversation"</b> even in WhatsApp groups or on social networks?</>, img: lineImage4 },
+  { text: <><b>Feeling lonely?</b> Can&apos;t find a partner?</>, img: lineImage5 },
+  { text: <><b>You hardly leave the house</b> because you have nowhere to go and with whom?</>, img: lineImage6 },
+  { text: <><b>Are you very stressed before going out or "dates"</b> and don&apos;t know how to start a conversation?</>, img: lineImage7 },
+  { text: <><b>Choose only hobbies that do not require communication</b> with people?</>, img: lineImage8 },
 ];
 
 const LinesSection = styled.section`
@@ -37,7 +37,7 @@ const AnimatedHighlight = styled.div`
   margin-bottom: 20px;
   width: 100%;
   max-width: 1800px;
-  padding: 0 20px; /* Control the margin between the sections */
+  padding: 0 20px;
   background-color: #f8f9fa;
 
   img {
@@ -50,19 +50,21 @@ const AnimatedHighlight = styled.div`
 const LeftTextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 0; /* Remove margin */
+  margin: 0;
   flex: 1;
-  //background-color: orange;
 
   p {
     padding-left: 40px;
     text-align: left;
     font-size: 1.3em;
-    font-weight: bold;
+    font-weight: normal;
     color: red;
+
+    b {
+      font-weight: bold;
+    }
   }
 `;
-
 
 const RightTextContainer = styled.div`
   display: flex;
@@ -73,8 +75,12 @@ const RightTextContainer = styled.div`
     padding-left: 50px;
     text-align: left;
     font-size: 1.3em;
-    font-weight: bold;
+    font-weight: normal;
     color: red;
+
+    b {
+      font-weight: bold;
+    }
   }
 `;
 
@@ -93,15 +99,15 @@ const AnimatedHighlightsSection = () => {
     <LinesSection>
       <AnimatedHighlight>
         <LeftTextContainer>
-            {lines.slice(0, Math.ceil(lines.length / 2)).map((line, index) => (
-              <p key={index}>{line.text}</p>
-            ))}            
+          {lines.slice(0, Math.ceil(lines.length / 2)).map((line, index) => (
+            <p key={index}>{line.text}</p>
+          ))}
         </LeftTextContainer>
         <img src={lines[imageIndex].img} alt="" />
         <RightTextContainer>
-            {lines.slice(Math.ceil(lines.length / 2)).map((line, index) => (
-              <p key={index}>{line.text}</p>
-            ))}
+          {lines.slice(Math.ceil(lines.length / 2)).map((line, index) => (
+            <p key={index}>{line.text}</p>
+          ))}
         </RightTextContainer>
       </AnimatedHighlight>
     </LinesSection>

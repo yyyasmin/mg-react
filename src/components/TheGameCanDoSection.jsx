@@ -11,16 +11,13 @@ const UDSection = styled.section`
   margin-bottom: 80px;
 `;
 
-
 const TheGameCanDoText = `
-  ✔️ Meet others with common interests<br />
-  ✔️ Practice listening and asking questions<br />
-  ✔️ Strengthen your interpersonal skills<br />
-  ✔️ Discover new knowledge and explore unfamiliar areas<br />
-  ✔️ Share your hobbies, ambitions, goals, and feelings without embarrassment<br />
+  ✔️ <b>Meet others</b> with common interests<br />
+  ✔️ <b>Practice active listening</b> and asking questions<br />
+  ✔️ Strengthen your <b>interpersonal skills</b><br />
+  ✔️ Discover new knowledge and <b>explore unfamiliar areas</b><br />
+  ✔️ Share with others and <b>allow people to really get to know you</b> - including hobbies, ambitions, goals, feelings - without embarrassment<br />
 `;
-
-
 
 const TheGameCanDoSection = ({ onShowUserDetailForm, onHideUserDetailForm, onSubmitUserDetailForm, showUserDetailForm }) => {
   const [formData, setFormData] = useState({
@@ -66,9 +63,8 @@ const TheGameCanDoSection = ({ onShowUserDetailForm, onHideUserDetailForm, onSub
 
   return (
     <UDSection>
-
       <SectionTitle>
-      Play Your Way connects users through an immersive experience and offers practical, convenient, and ongoing benefits:<br />
+        Play Your Way connects users through an immersive experience and offers practical, convenient, and ongoing benefits:<br />
       </SectionTitle>
 
       <SectionSubTitle dangerouslySetInnerHTML={{ __html: TheGameCanDoText }} />
